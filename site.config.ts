@@ -17,6 +17,9 @@ export const site = {
     slides: true,
   },
 
+  /** Show "Slides" in the menu. false = the page only opens by direct link (/slides). */
+  slidesInMenu: false,
+
   /** Pilot progress numbers and targets (Progress page). */
   impact: { reached: 0, campuses: 0, workshops: 0, rating: 0 },
   targets: { reached: 150, campuses: 3, workshops: 10, rating: 4 },

@@ -14,7 +14,7 @@ export const site = {
     practise: false,
     progress: false,
     /** The GLF proposal deck. Keep false on any public deployment. */
-    slides: false,
+    slides: true,
   },
 
   /** Pilot progress numbers and targets (Progress page). */

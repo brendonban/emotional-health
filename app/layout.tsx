@@ -8,6 +8,7 @@ import Nav from "@/components/Nav";
 import HelpFab from "@/components/HelpFab";
 import ScrollBar from "@/components/ScrollBar";
 import { site } from "@/site.config";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: { default: "Emotional Health Project", template: "%s · Emotional Health Project" },
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </header>
         <main>{children}</main>
         <HelpFab />
+        <Analytics />
       </body>
     </html>
   );

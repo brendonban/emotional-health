@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     { href: "/schedule", label: "Schedule" },
     ...(site.pages.progress ? [{ href: "/progress", label: "Progress" }] : []),
     { href: "/methodology", label: "Methodology" },
-    ...(site.pages.slides ? [{ href: "/slides", label: "Slides" }] : []),
+    ...(site.pages.slides && site.slidesInMenu ? [{ href: "/slides", label: "Slides" }] : []),
     { href: "/support", label: "Support" },
     { href: "/about", label: "About" },
   ];

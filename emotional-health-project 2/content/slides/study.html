@@ -1,0 +1,27 @@
+<section id="study" data-transition="fade" style="background:#23262b;color:#f6f3ea;font-family:Inter, sans-serif;padding:128px 128px 160px">
+<h2 style="position:absolute;left:128px;top:128px;width:1600px;font-family:'Fraunces', serif;font-size:64px;font-weight:500;line-height:1.15">Young adults carry the heaviest load</h2>
+<x-embed style="position:absolute;left:128px;top:260px;width:1000px;height:640px"><div style="font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;color:#f6f3ea"><div style="font-size:24px;color:#b9bcc2;margin-bottom:28px">Depression prevalence by age group, %</div><div id="c" style="position:relative"></div></div><script>
+var d=[["16–19",7.9,1],["20–29",7.6,1],["30–39",4.1,0],["40–49",3.1,0],["50–59",2.4,0],["60+",3.1,0]],M=9,c=document.getElementById('c'),W=700,h='';
+d.forEach(function(r,i){h+='<div style="display:flex;align-items:center;height:84px"><div style="width:120px;font-size:26px;font-weight:'+(r[2]?700:400)+';color:'+(r[2]?'#ffe94a':'#d4d6da')+'">'+r[0]+'</div><div style="width:'+W+'px;height:52px;background:#30343a;border-radius:8px;position:relative"><div class="b" data-v="'+r[1]+'" style="height:100%;width:0;border-radius:8px;background:'+(r[2]?'#ffe94a':'#7d838c')+';transition:width 1.2s cubic-bezier(.2,.8,.2,1) '+(i*0.15)+'s"></div></div><div class="n" data-v="'+r[1]+'" style="width:110px;text-align:right;font-size:30px;font-weight:700;color:'+(r[2]?'#ffe94a':'#d4d6da')+'">0.0</div></div>'});
+var x=120+W*4.6/M;h+='<div id="m" style="position:absolute;left:'+x+'px;top:-6px;height:516px;border-left:3px dashed #e8553f;opacity:0;transition:opacity .6s 1.4s"></div><div id="ml" style="position:absolute;left:'+(x+10)+'px;top:520px;font-size:24px;color:#ff8a6e;opacity:0;transition:opacity .6s 1.4s">All adults 15+: 4.6%</div>';
+c.innerHTML=h;
+function run(){var bs=c.querySelectorAll('.b'),ns=c.querySelectorAll('.n');bs.forEach(function(b){b.style.width='0'});ns.forEach(function(n){n.textContent='0.0'});document.getElementById('m').style.opacity=0;document.getElementById('ml').style.opacity=0;
+setTimeout(function(){bs.forEach(function(b){b.style.width=(b.dataset.v/M*W)+'px'});document.getElementById('m').style.opacity=1;document.getElementById('ml').style.opacity=1;var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/1400);ns.forEach(function(n){n.textContent=(n.dataset.v*k).toFixed(1)});if(k<1)requestAnimationFrame(f)})(t0)},300)}
+run();document.addEventListener('slideenter',function(e){if(e.detail==='study')run()});
+</script></x-embed>
+<div data-build-in="rise 1" style="position:absolute;left:1200px;top:260px;width:592px;display:flex;flex-direction:column;gap:8px;border-left:4px solid #ffe94a;padding:0 0 0 28px">
+<p style="font-family:'Fraunces', serif;font-size:72px;font-weight:500;line-height:1.1;color:#ffe94a">2×</p>
+<p style="font-size:26px;line-height:1.4;color:#d4d6da">adults with depression, 2019 to 2023: about one million people</p>
+</div>
+<div data-build-in="rise 2" style="position:absolute;left:1200px;top:470px;width:592px;display:flex;flex-direction:column;gap:8px;border-left:4px solid #ffe94a;padding:0 0 0 28px">
+<p style="font-family:'Fraunces', serif;font-size:72px;font-weight:500;line-height:1.1;color:#ffe94a">1 in 2</p>
+<p style="font-size:26px;line-height:1.4;color:#d4d6da">people with depression had thoughts of self-harm or suicide</p>
+</div>
+<div data-build-in="rise 3" style="position:absolute;left:1200px;top:680px;width:592px;display:flex;flex-direction:column;gap:8px;border-left:4px solid #ffe94a;padding:0 0 0 28px">
+<p style="font-family:'Fraunces', serif;font-size:72px;font-weight:500;line-height:1.1;color:#ffe94a">1 in 3</p>
+<p style="font-size:26px;line-height:1.4;color:#d4d6da">young people seek professional help; 60% fear being judged</p>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1500px;font-size:24px;color:#b9bcc2">Sources: NHMS 2023 (Institute for Public Health, 2024); Malaysian Youth Mental Health Index 2023 (IYRES and UNICEF)</p>
+<p style="position:absolute;right:128px;bottom:64px;width:120px;font-size:24px;color:#b9bcc2;text-align:right">4</p>
+<aside>The bars animate as the slide opens: the two youngest age groups have the highest depression prevalence, well above the 4.6% for all adults. Then click to reveal three more findings. NHMS 2023: the number of adults with depression doubled from 2019, and nearly half of those with depression reported thoughts of self-harm or suicide. The Malaysian Youth Mental Health Index 2023 (ages 15 to 30) scored 71.91, a moderate-risk level. The 1 in 3 help-seeking and 60% fear-of-judgement figures are as reported from MyMHI'23 by Penang Monthly; check them against the IYRES report before presenting.</aside>
+</section>
